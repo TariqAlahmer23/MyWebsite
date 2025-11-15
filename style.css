@@ -2497,14 +2497,15 @@ body:not(.dark) .moon-icon {
   margin-bottom: 40px;
 }
 
-/* Carousel - Fixed responsive */
+/* Carousel - Fixed responsive with visible buttons */
 .posts-carousel {
   display: flex;
   align-items: center;
   position: relative;
   max-width: 100%;
-  overflow: hidden;
-  padding: 0 60px;
+  overflow: visible;
+  padding: 0 70px;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -2644,40 +2645,69 @@ body:not(.dark) .moon-icon {
   color: #fff;
   font-size: 28px;
   border-radius: 50%;
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
   position: absolute;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(114, 4, 4, 0.3);
 }
-.carousel-btn:hover { background: #ea580c; }
-.prev { left: -60px; }
-.next { right: -60px; }
+.carousel-btn:hover { 
+  background: #ea580c; 
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(114, 4, 4, 0.4);
+}
+.carousel-btn:active {
+  transform: scale(0.95);
+}
+.prev { 
+  left: 10px; 
+}
+.next { 
+  right: 10px; 
+}
 
 @media (max-width: 768px) {
-  .prev { left: -50px; }
-  .next { right: -50px; }
+  .posts-carousel {
+    padding: 0 60px;
+  }
+  .prev { left: 8px; }
+  .next { right: 8px; }
   .carousel-btn {
-    width: 38px;
-    height: 38px;
-    font-size: 24px;
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
   }
 }
 
 @media (max-width: 640px) {
-  .prev { left: -40px; }
-  .next { right: -40px; }
+  .posts-carousel {
+    padding: 0 50px;
+  }
+  .prev { left: 5px; }
+  .next { right: 5px; }
   .carousel-btn {
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
     font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .prev { left: -30px; }
-  .next { right: -30px; }
+  .posts-carousel {
+    padding: 0 45px;
+  }
+  .prev { left: 3px; }
+  .next { right: 3px; }
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
 }
 
 .dark .carousel-btn {
