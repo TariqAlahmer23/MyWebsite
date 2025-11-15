@@ -32,9 +32,11 @@
     </button>
     <!-- Center links -->
     <ul class="nav-center" id="primary-menu">
-      <li><a href="#">Home</a></li>
+      <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#posts">Posts</a></li>
     </ul>
 
     <!-- Right pill -->
@@ -42,20 +44,17 @@
       <a href="#contact" class="pill">Contact</a>
     </div>
   </nav>
+  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+    <div class="toggle-icon">
+      <i data-lucide="sun" class="sun-icon"></i>
+      <i data-lucide="moon" class="moon-icon"></i>
+    </div>
+  </button>
 </header>
 
-
-  <!-- Hero Section -->
-    <!-- Dark Mode Toggle -->
-    <!-- <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-        <div class="toggle-icon">
-            <i data-lucide="sun" class="sun-icon" style="color: aliceblue;"></i>
-            <i data-lucide="moon" class="moon-icon"></i>
-        </div>
-    </button> -->
-
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section" id="hero">
+        <div class="section-stars" data-stars="hero"></div>
         <!-- Animated Background -->
         <div class="animated-background">
             <!-- Gradient Orbs -->
@@ -79,92 +78,117 @@
             <div class="particle particle-12"></div>
         </div>
 
-        <div class="container">
-            <!-- Left Content -->
+        <div class="container hero-grid">
             <div class="hero-content">
-                <!-- Badge -->
-                <div class="badge">
-                    <span>Available for work</span>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">AI & Software Engineer</span>
                 </div>
-
-                <!-- Main Heading -->
-                <div class="heading-group">
-                    <h1 class="main-heading">
-                        Hi, I'm <span class="gradient-text">Tariq Alahmer</span>
-                    </h1>
-                    <h2 class="sub-heading">Information & AI Engineer</h2>
-                </div>
-
-                <!-- Description -->
-                <p class="description">
-                    I craft beautiful, functional digital experiences that blend creativity with
-                    cutting-edge technology. Specialized in web development, UI/UX design, and
-                    bringing ideas to life.
+                <h1 class="hero-title">
+                    Hi, I’m <span class="gradient-text">Tarek Alahmar</span>. I build human-centered AI products.
+                </h1>
+                <p class="hero-description">
+                    AI and Software Engineer based between Damascus and Riyadh, focused on transforming innovative ideas into practical, people-first applications. I currently lead Grace—an AI-powered mental health companion—and help teams ship resilient web and mobile experiences end to end.
                 </p>
-
-                <!-- CTA Buttons -->
+                <ul class="hero-highlights">
+                    <li>
+                        <i data-lucide="brain-circuit"></i>
+                        <span>Designing and deploying AI models that personalize support and improve outcomes.</span>
+                    </li>
+                    <li>
+                        <i data-lucide="laptop"></i>
+                        <span>Delivering full-stack web and mobile solutions for clients across Syria and Saudi Arabia.</span>
+                    </li>
+                    <li>
+                        <i data-lucide="handshake"></i>
+                        <span>Mentoring peers, contributing to community tech programs, and promoting accessible AI.</span>
+                    </li>
+                </ul>
                 <div class="cta-buttons">
-                    <button class="btn btn-primary">
-                        View My Work
-                        <i data-lucide="arrow-right" class="btn-icon"></i>
-                    </button>
-                    <button class="btn btn-outline" style="color: white;">Get In Touch</button>
+                    <a href="#products" class="btn btn-primary">
+                        Explore recent work
+                        <i data-lucide="arrow-up-right" class="btn-icon"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        Book a strategy call
+                        <i data-lucide="calendar" class="btn-icon"></i>
+                    </a>
                 </div>
-
-                <!-- Social Links -->
-                <div class="social-links">
-                    <a href="#" class="social-link">
+                <div class="hero-trust-bar">
+                    <div class="trust-label">Participated in</div>
+                    <div class="trust-logos">
+                        <img src="images/unrwa.png" alt="UNRWA" class="trust-logo" loading="lazy">
+                        <img src="images/fmee-exhibition.jpeg" alt="FMEE" class="trust-logo" loading="lazy">
+                        <img src="images/Dimashq-icon.jpg" alt="Dimashq" class="trust-logo" loading="lazy">
+                        <img src="images/texpo.jpg" alt="TEXPO" class="trust-logo" loading="lazy">
+                        <span class="trust-logo trust-logo--text">Germany Exhibition</span>
+                    </div>
+                </div>
+                <div class="hero-social">
+                    <a href="#" class="social-link" aria-label="GitHub">
                         <i data-lucide="github"></i>
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
                         <i data-lucide="linkedin"></i>
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="#" class="social-link" aria-label="Twitter">
                         <i data-lucide="twitter"></i>
                     </a>
-                    <a href="#" class="social-link">
+                    <a href="#" class="social-link" aria-label="Email">
                         <i data-lucide="mail"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Right Content - Image -->
-            <div class="hero-image-container">
-                <!-- Decorative Background Elements -->
-                <div class="decorative-blur blur-1"></div>
-                <div class="decorative-blur blur-2"></div>
-
-                <!-- Main Image -->
-                <div class="image-wrapper">
-                    <img 
-                        src="images/Me2.jpeg"
-                        alt="Professional workspace"
-                        class="hero-image"
-                    />
+            <div class="hero-showcase">
+                <div class="hero-card hero-card--main">
+                    <div class="hero-card__header">
+                        <span class="hero-card__tag">Build with purpose</span>
+                        <span class="hero-card__icon">
+                            <i data-lucide="layout-dashboard"></i>
+                        </span>
+                    </div>
+                    <p class="hero-card__title">Discover → Prototype → Launch</p>
+                    <p class="hero-card__copy">
+                        Every engagement blends research-led discovery with rapid experimentation and measurable releases—keeping AI models ethical, transparent, and reliable for the people who rely on them.
+                    </p>
+                    <ul class="hero-card__steps">
+                        <li><span>01</span> Clarify the problem and user journey</li>
+                        <li><span>02</span> Train and integrate intelligent features</li>
+                        <li><span>03</span> Deploy, measure, and iterate with feedback</li>
+                    </ul>
                 </div>
 
-                <!-- Floating Stats Cards -->
-                <div class="stat-card stat-card-bottom">
-                    <div class="stat-content">
-                        <div class="stat-icon">
-                            <span>5+</span>
-                        </div>
-                        <div class="stat-text">
-                            <p class="stat-label">Years</p>
-                            <p class="stat-value">Experience</p>
-                        </div>
+                <div class="hero-photo">
+                    <div class="hero-photo__glow"></div>
+                    <img src="images/Me2.jpeg" alt="Tarek Alahmar working at a minimal workspace" />
+                    <div class="hero-metric hero-metric--projects">
+                        <span class="metric-value">Grace</span>
+                        <span class="metric-label">Mental health AI companion</span>
+                    </div>
+                    <div class="hero-metric hero-metric--experience">
+                        <span class="metric-value">2+</span>
+                        <span class="metric-label">Years delivering client AI apps</span>
                     </div>
                 </div>
 
-                <div class="stat-card stat-card-top">
-                    <div class="stat-content">
-                        <div class="stat-icon">
-                            <span>50+</span>
-                        </div>
-                        <div class="stat-text">
-                            <p class="stat-label">Projects</p>
-                            <p class="stat-value">Completed</p>
-                        </div>
+                <div class="hero-card hero-card--secondary">
+                    <div class="hero-card__body">
+                        <h3>Recent focus</h3>
+                        <ul>
+                            <li>
+                                <i data-lucide="sparkle"></i>
+                                Leading Grace from concept to AI-driven companion supporting users with depression.
+                            </li>
+                            <li>
+                                <i data-lucide="code"></i>
+                                Shipping full-stack web and mobile apps with Django, React, and cloud-native tooling.
+                            </li>
+                            <li>
+                                <i data-lucide="users"></i>
+                                Teaching programming fundamentals and AI awareness in community programs.
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -172,17 +196,132 @@
     </section>
 
 <section class="about" id="about">
-  <div class="about-box reveal">
-    <h2>I am a Professional User Experience Designer</h2>
-    <p>
-      I design and develop modern digital solutions specializing in stylish websites,
-      intuitive web services, and seamless online stores. My passion is crafting
-      digital user experiences that blend creativity with functionality.
-    </p>
-    <div class="btn-group">
-      <a href="#" class="btn btn-primary">My Projects</a>
-      <a href="#" class="btn btn-outline">Download CV</a>
+  <div class="section-stars" data-stars="about"></div>
+  <div class="about-grid">
+    <div class="about-intro reveal">
+      <span class="section-eyebrow">About Tarek</span>
+      <h2 class="section-title">AI engineer translating ambitious ideas into meaningful products</h2>
+      <p>
+        I’m Tarek Alahmar—an AI and Software Engineer with a passion for building solutions that genuinely help people. From Damascus to Riyadh, I partner with founders, healthcare leaders, and community teams to move concepts from research to reliable, user-ready software.
+      </p>
+      <ul class="about-highlights">
+        <li>
+          <i data-lucide="heart-pulse"></i>
+          Lead engineer behind <strong>Grace</strong>, an AI mental health companion supporting people experiencing depression.
+        </li>
+        <li>
+          <i data-lucide="layers"></i>
+          Deliver full-stack web and mobile products—from UX design through scalable deployment and cloud ops.
+        </li>
+        <li>
+          <i data-lucide="graduation-cap"></i>
+          Share knowledge through community programs, teaching programming fundamentals and AI awareness.
+        </li>
+      </ul>
+      <div class="about-actions">
+        <a href="#products" class="btn btn-primary">Explore Grace & projects</a>
+        <a href="#contact" class="btn btn-outline">Download CV</a>
+      </div>
     </div>
+
+    <div class="about-panels">
+      <article class="about-card reveal">
+        <span class="about-card__title">Focus areas</span>
+        <p>Mental health technology, education platforms, civic innovation, automation for startups, and accessible AI.</p>
+      </article>
+      <article class="about-card reveal">
+        <span class="about-card__title">Toolbelt</span>
+        <div class="badge-cloud">
+          <span>Python</span>
+          <span>Django</span>
+          <span>React</span>
+          <span>TensorFlow</span>
+          <span>PyTorch</span>
+          <span>REST APIs</span>
+          <span>AWS & GCP</span>
+          <span>Docker</span>
+        </div>
+      </article>
+      <article class="about-card reveal">
+        <span class="about-card__title">Impact snapshot</span>
+        <ul class="about-metrics">
+          <li>
+            <span class="metric-label">Current role</span>
+            <span class="metric-value">Founder & AI Engineer</span>
+            <span class="metric-caption">Grace mental health companion · 2024 – present</span>
+          </li>
+          <li>
+            <span class="metric-label">Freelance delivery</span>
+            <span class="metric-value">2022 – 2024</span>
+            <span class="metric-caption">Full-stack & AI solutions for clients in Syria and Saudi Arabia</span>
+          </li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-stars" data-stars="services"></div>
+  <div class="section-intro reveal">
+    <h2 class="section-title">What we can build together</h2>
+    <p class="section-description">
+      Tailored partnerships designed around clarity, velocity, and continuous learning. Choose the engagement that matches your roadmap.
+    </p>
+  </div>
+
+  <div class="service-grid">
+     <article class="service-card reveal">
+       <div class="service-icon">
+        <i data-lucide="radar"></i>
+       </div>
+      <h3>AI product strategy</h3>
+      <p>Transform ideas into responsible AI solutions grounded in research, ethics, and measurable impact.</p>
+      <ul>
+        <li>User discovery & problem framing</li>
+        <li>Data-readiness and model feasibility reviews</li>
+        <li>Pilot roadmaps with success metrics</li>
+      </ul>
+    </article>
+ 
+     <article class="service-card reveal">
+       <div class="service-icon">
+        <i data-lucide="code"></i>
+       </div>
+      <h3>Full-stack engineering</h3>
+      <p>Ship performant web and mobile apps using Python, Django, React, and modern cloud tooling.</p>
+      <ul>
+        <li>API architecture & secure data flows</li>
+        <li>Responsive UX and component systems</li>
+        <li>CI/CD, observability, and cloud deployment</li>
+      </ul>
+    </article>
+ 
+     <article class="service-card reveal">
+       <div class="service-icon">
+        <i data-lucide="bot"></i>
+       </div>
+      <h3>Conversational AI & automation</h3>
+      <p>Design chatbots, recommendation systems, and intelligent workflows tailored to your use case.</p>
+      <ul>
+        <li>Custom NLP pipelines with TensorFlow & Rasa</li>
+        <li>Personalized recommendations & scoring</li>
+        <li>Operational automations and integrations</li>
+      </ul>
+    </article>
+ 
+     <article class="service-card reveal">
+       <div class="service-icon">
+        <i data-lucide="book-open"></i>
+       </div>
+      <h3>Mentorship & consulting</h3>
+      <p>Equip teams and communities with the fundamentals of AI, programming, and ethical innovation.</p>
+      <ul>
+        <li>Workshops on Python, AI, and product thinking</li>
+        <li>Curriculum design for community programs</li>
+        <li>Advisory sessions on technical roadmaps</li>
+      </ul>
+    </article>
   </div>
 </section>
 
@@ -221,8 +360,18 @@
         <a href="#" class="btn">View Case Study</a>
         <a href="#" class="btn-outline">Get the App</a>
       </div>
+      <div class="product-mentions">
+        <p class="product-mentions__title">Grace has been showcased at:</p>
+        <div class="product-mentions__logos">
+          <img src="images/unrwa.png" alt="UNRWA" class="trust-logo" loading="lazy">
+          <img src="images/fmee-exhibition.jpeg" alt="FMEE" class="trust-logo" loading="lazy">
+          <img src="images/Dimashq-icon.jpg" alt="Dimashq" class="trust-logo" loading="lazy">
+          <img src="images/texpo.jpg" alt="TEXPO" class="trust-logo" loading="lazy">
+          <span class="trust-logo trust-logo--text">Germany Exhibition</span>
+        </div>
       </div>
-    
+      </div>
+
 
     <!-- Two phones only -->
     <div class="products-visual reveal">
@@ -275,60 +424,60 @@
     <div class="posts-track">
 <article class="post-card" 
   data-id="1" 
-  data-title="First Post" 
-  data-date="22 Oct 2025" 
-  data-comments="246" 
-  data-img="images/Me.jpeg"
-  data-bio="This is the full content of the post, you can write here the complete details.">
-  <img src="images/Me.jpeg" alt="Post 1">
-  <div class="post-meta">22 Oct 2025</div>
-  <h3>Lorem ipsum dolor sit consea. Nulla purus arcu</h3>
+  data-title="Unrwa Post" 
+  data-date="15 Nov 2025" 
+  data-comments="0" 
+  data-img="images/unrwa.jpg"
+  data-bio="Happy to be in the UNRWA Exhibition , and try to make all of the people happy and satisfied with the project ( Grace ) ">
+  <img src="images/unrwa.jpg" alt="Post 1">
+  <div class="post-meta">15 Nov 2025</div>
+  <h3>UNRWA Exhibition</h3>
 </article>
 
 <article class="post-card" 
   data-id="2" 
-  data-title="Second Post" 
-  data-date="22 Oct 2025" 
-  data-comments="246" 
-  data-img="images/Me.jpeg"
-  data-bio="This is the full content of the post, you can write here the complete details.">
-  <img src="images/Me.jpeg" alt="Post 2">
-  <div class="post-meta">22 Oct 2025</div>
-  <h3>Lorem ipsum dolor sit consea. Nulla purus arcu</h3>
+  data-title="FMEE POST" 
+  data-date="15 Nov 2025" 
+  data-comments="0" 
+  data-img="images/Post-FMEE.jpg"
+  data-bio="Happy to be in the FMEE Exhibition , and try to make all of the people happy and satisfied with the project ( Grace ) ">
+  <img src="images/Post-FMEE.jpg" alt="Post 2">
+  <div class="post-meta">15 Nov 2025</div>
+  <h3>FMEE Exhibition</h3>
 </article>
 
 <article class="post-card" 
   data-id="3" 
-  data-title="Third Post" 
-  data-date="22 Oct 2025" 
+  data-title="Germany Post" 
+  data-date="15 Nov 2025" 
   data-comments="246" 
-  data-img="images/Me.jpeg"
-  data-bio="This is the full content of the post, you can write here the complete details.">
-  <img src="images/Me.jpeg" alt="Post 3">
-  <div class="post-meta">22 Oct 2025</div>
-  <h3>Lorem ipsum dolor sit consea. Nulla purus arcu</h3>
+  data-img="images/germany.jpg"
+  data-bio="Happy to be in the Germany Exhibition , and try to make all of the people happy and satisfied with the project ( Grace ) ">
+  <img src="images/germany.jpg" alt="Post 3">
+  <div class="post-meta">15 Nov 2025</div>
+  <h3>GERMANY EXHIBITION</h3>
 </article>
 <article class="post-card" 
   data-id="4" 
   data-title="Forth Post" 
-  data-date="22 Oct 2025" 
+  data-date="15 Nov 2025" 
   data-comments="246" 
-  data-img="images/Me.jpeg"
-  data-bio="This is the full content of the post, you can write here the complete details.">
-  <img src="images/Me.jpeg" alt="Post 4">
-  <div class="post-meta">22 Oct 2025</div>
-  <h3>Lorem ipsum dolor sit consea. Nulla purus arcu</h3>
+  data-img="images/demshq.jpg"
+  data-bio="Happy to be in the Dimascus Exhibition , and try to make all of the people happy and satisfied with the project ( Grace ) ">
+  <img src="images/demshq.jpg" alt="Post 4">
+  <div class="post-meta">15 Nov 2025</div>
+  <h3>معرض دمشق الدولي</h3>
 </article>
 <article class="post-card" 
   data-id="5" 
   data-title="Fifth Post" 
-  data-date="22 Oct 2025" 
-  data-comments="246" 
-  data-img="images/Me.jpeg"
-  data-bio="This is the full content of the post, you can write here the complete details.">
-  <img src="images/Me.jpeg" alt="Post 5">
-  <div class="post-meta">22 Oct 2025</div>
-  <h3>Lorem ipsum dolor sit consea. Nulla purus arcu</h3>
+  data-date="15 Nov 2025" 
+  data-comments="0" 
+  data-img="images/unrwa.jpg"
+  data-bio="Happy to be in the UNRWA Exhibition , and try to make all of the people happy and satisfied with the project ( Grace ) ">
+  <img src="images/unrwa.jpg" alt="Post 5">
+  <div class="post-meta">15 Nov 2025</div>
+  <h3>UNRWA Exhibition</h3>
 </article>
     </div>
     <button class="carousel-btn next">›</button>
@@ -355,7 +504,7 @@
     </div>
     <div class="modal-footer">
       <button class="action like">❤️ Like (<span id="likeCount">0</span>)</button>
-      <button class="action connect">🤝 Connect</button>
+      <a href="#contact"><button class="action connect">🤝 Connect</button></a>
     </div>
 
   </div>
@@ -377,13 +526,13 @@
         Reach out and I’ll get back to you as soon as possible.
       </p>
       <div class="info-list">
-        <p>📧 <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-        <p>📞 <a href="tel:+966555123456">+966 555 123 456</a></p>
+        <p>📧 <a href="mailto:tariq.alahmer@gracee.app">tariq.alahmer@gracee.app</a></p>
+        <p>📞 <a href="tel:+966555123456">+966 53 941 9507</a></p>
       </div>
 
       <!-- Pro Social Buttons -->
       <div class="social-buttons">
-        <a href="twitter.com" class="btn-social twitter">
+        <a href="https://twitter.com" class="btn-social twitter" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-twitter"></i> Twitter
         </a>
         <a href="#" class="btn-social linkedin">
@@ -396,15 +545,15 @@
     </div>
 
     <!-- Right Side -->
-    <form class="contact-form">
+    <form class="contact-form" id="contactForm">
       <div class="form-group">
-        <input type="text" placeholder="Your Name" required>
+        <input type="text" name="name" placeholder="Your Name" required>
       </div>
       <div class="form-group">
-        <input type="email" placeholder="Your Email" required>
+        <input type="email" name="email" placeholder="Your Email" required>
       </div>
       <div class="form-group">
-        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
       </div>
       <button type="submit" class="btn-submit">
         <span>Send Message</span>
@@ -413,7 +562,43 @@
     </form>
   </div>
 </section>
-
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <img src="images/Combined.png" alt="Tariq Alahmer logo mark">
+      <p>Elevating human-centered experiences with intelligent design systems and thoughtful engineering.</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <span class="footer-heading">Explore</span>
+        <a href="#hero">Hero</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#posts">Posts</a>
+      </div>
+      <div>
+        <span class="footer-heading">Connect</span>
+        <a href="mailto:youremail@example.com">Email</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Behance</a>
+        <a href="#">Twitter</a>
+      </div>
+      <div>
+        <span class="footer-heading">Availability</span>
+        <p>Currently onboarding partners for Q1—Q2 2026 product engagements.</p>
+        <a class="footer-cta" href="#contact">Schedule a call</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-meta">
+    <span>© <span id="currentYear"></span> Tariq Alahmer. Crafted in Riyadh.</span>
+    <div class="footer-meta__links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </div>
+</footer>
 
 
   <!-- Scripts -->
@@ -424,6 +609,8 @@
       alert("Thanks for clicking!");
     });
   });
+
+  const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ---- Explosion logic (click to explode) ----
   const bubblesContainer = document.querySelector('.hero .bubbles') || document.querySelector('.bubbles');
@@ -676,15 +863,20 @@ function saveData() {
   localStorage.setItem("likes", JSON.stringify(likes));
 }
 
-// عند تحميل الصفحة
+// عند تحميل الصفحة - Fixed with null checks
 window.addEventListener("DOMContentLoaded", () => {
-  modal.style.display = "none";
-  document.getElementById('postCount').innerText = document.querySelectorAll('.post-card').length;
+  if (modal) modal.style.display = "none";
+  const postCountEl = document.getElementById('postCount');
+  if (postCountEl) {
+    postCountEl.innerText = document.querySelectorAll('.post-card').length;
+  }
 });
 
-// فتح البوست
+// فتح البوست - Fixed with null checks
 document.querySelectorAll('.post-card').forEach(card => {
   card.addEventListener('click', () => {
+    if (!modal || !modalImg || !modalTitle || !modalDate) return;
+    
     currentPost = card.dataset.id;
     modal.style.display = 'flex';
     modalImg.src = card.dataset.img;
@@ -694,61 +886,71 @@ document.querySelectorAll('.post-card').forEach(card => {
     // البايو
     const bio = card.dataset.bio || "No description available.";
     const modalBody = document.querySelector('.modal-body');
-    modalBody.innerHTML = `
-      <img src="${card.dataset.img}" alt="">
-      <h2>${card.dataset.title}</h2>
-      <p>${card.dataset.date}</p>
-      <p>${bio}</p>
-    `;
+    if (modalBody) {
+      modalBody.innerHTML = `
+        <img src="${card.dataset.img}" alt="">
+        <h2>${card.dataset.title}</h2>
+        <p>${card.dataset.date}</p>
+        <p>${bio}</p>
+      `;
+    }
 
-    likeCount.innerText = likes[currentPost] || 0;
+    if (likeCount) {
+      likeCount.innerText = likes[currentPost] || 0;
+    }
   });
 });
 
-// إغلاق المودال
-closeBtn.addEventListener('click', () => modal.style.display = 'none');
-overlay.addEventListener('click', () => modal.style.display = 'none');
+// إغلاق المودال - Fixed with null checks
+if (closeBtn) {
+  closeBtn.addEventListener('click', () => {
+    if (modal) modal.style.display = 'none';
+  });
+}
+if (overlay) {
+  overlay.addEventListener('click', () => {
+    if (modal) modal.style.display = 'none';
+  });
+}
 
-// لايك
-likeBtn.addEventListener('click', () => {
-  likes[currentPost] = (likes[currentPost] || 0) + 1;
-  likeCount.innerText = likes[currentPost];
-  saveData();
-});
+// لايك - Fixed with null check
+if (likeBtn && likeCount) {
+  likeBtn.addEventListener('click', () => {
+    if (!currentPost) return;
+    likes[currentPost] = (likes[currentPost] || 0) + 1;
+    likeCount.innerText = likes[currentPost];
+    saveData();
+  });
+}
 
-// Carousel
-const track = document.querySelector('.posts-track');
-document.querySelector('.next').addEventListener('click', () => {
-  track.scrollBy({ left: 300, behavior: 'smooth' });
-});
-document.querySelector('.prev').addEventListener('click', () => {
-  track.scrollBy({ left: -300, behavior: 'smooth' });
-});
+// Carousel - Removed duplicate, handled below
 
 
-// توليد نجوم عشوائية داخل قسم الـ Posts
+// توليد نجوم عشوائية داخل قسم الـ Posts - Fixed with null check
 const postsSection = document.querySelector('.posts');
-const numStars = 50; // عدد النجوم العادية
+if (postsSection) {
+  const numStars = 50; // عدد النجوم العادية
 
-// توليد النجوم العادية
-for (let i = 0; i < numStars; i++) {
-  const star = document.createElement('div');
-  star.classList.add('star');
+  // توليد النجوم العادية
+  for (let i = 0; i < numStars; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
 
-  // موضع عشوائي
-  star.style.top = Math.random() * 100 + "%";
-  star.style.left = Math.random() * 100 + "%";
+    // موضع عشوائي
+    star.style.top = Math.random() * 100 + "%";
+    star.style.left = Math.random() * 100 + "%";
 
-  // حجم عشوائي
-  const size = Math.random() * 3 + 1;
-  star.style.width = size + "px";
-  star.style.height = size + "px";
+    // حجم عشوائي
+    const size = Math.random() * 3 + 1;
+    star.style.width = size + "px";
+    star.style.height = size + "px";
 
-  // تأخير ومدة عشوائية
-  star.style.animationDelay = `${Math.random() * 5}s, ${Math.random() * 60}s`;
-  star.style.animationDuration = `2s, ${30 + Math.random() * 60}s`;
+    // تأخير ومدة عشوائية
+    star.style.animationDelay = `${Math.random() * 5}s, ${Math.random() * 60}s`;
+    star.style.animationDuration = `2s, ${30 + Math.random() * 60}s`;
 
-  postsSection.appendChild(star);
+    postsSection.appendChild(star);
+  }
 }
 
 // ✅ توليد الشهب بشكل دوري
@@ -768,8 +970,10 @@ function createShootingStar() {
   }, 2000); // يختفي بعد 2 ثانية
 }
 
-// توليد شهاب جديد كل فترة (3–8 ثواني)
-setInterval(createShootingStar, Math.random() * 5000 + 3000);
+// توليد شهاب جديد كل فترة (3–8 ثواني) - Fixed with null check
+if (!prefersReducedMotion && postsSection) {
+  setInterval(createShootingStar, Math.random() * 5000 + 3000);
+}
 
 
 
@@ -780,13 +984,15 @@ let currentIndex = 0;
 const cardsPerView = 1; // لو تبغى يظهر كرت واحد فقط في كل مرة
 const totalDots = Math.ceil(cards.length / cardsPerView);
 
-// إنشاء النقاط
-for (let i = 0; i < totalDots; i++) {
-  const dot = document.createElement('span');
-  dot.classList.add('dot');
-  if (i === 0) dot.classList.add('active');
-  dot.dataset.index = i;
-  dotsContainer.appendChild(dot);
+// إنشاء النقاط - Fixed with null check
+if (dotsContainer) {
+  for (let i = 0; i < totalDots; i++) {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.dataset.index = i;
+    dotsContainer.appendChild(dot);
+  }
 }
 
 // تحديث النقاط
@@ -796,62 +1002,133 @@ function updateDots(index) {
   });
 }
 
-// التنقل بالأسهم
-document.querySelector('.next').addEventListener('click', () => {
-  if (currentIndex < totalDots - 1) {
-    currentIndex++;
-    track.scrollBy({ left: 300, behavior: 'smooth' });
-    updateDots(currentIndex);
-  }
-});
+// التنقل بالأسهم - Fixed with null checks
+const nextBtnCarousel = document.querySelector('.next');
+const prevBtnCarousel = document.querySelector('.prev');
 
-document.querySelector('.prev').addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    track.scrollBy({ left: -300, behavior: 'smooth' });
-    updateDots(currentIndex);
-  }
-});
-
-// التنقل عند الضغط على النقاط
-document.querySelectorAll('.dot').forEach(dot => {
-  dot.addEventListener('click', () => {
-    currentIndex = parseInt(dot.dataset.index);
-    track.scrollTo({ left: currentIndex * 300, behavior: 'smooth' });
-    updateDots(currentIndex);
+if (track && nextBtnCarousel) {
+  nextBtnCarousel.addEventListener('click', () => {
+    if (currentIndex < totalDots - 1) {
+      currentIndex++;
+      track.scrollBy({ left: 300, behavior: 'smooth' });
+      updateDots(currentIndex);
+    }
   });
-});
+}
+
+if (track && prevBtnCarousel) {
+  prevBtnCarousel.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      track.scrollBy({ left: -300, behavior: 'smooth' });
+      updateDots(currentIndex);
+    }
+  });
+}
+
+// التنقل عند الضغط على النقاط - Fixed with null check
+if (track) {
+  document.querySelectorAll('.dot').forEach(dot => {
+    dot.addEventListener('click', () => {
+      currentIndex = parseInt(dot.dataset.index);
+      track.scrollTo({ left: currentIndex * 300, behavior: 'smooth' });
+      updateDots(currentIndex);
+    });
+  });
+}
 const starsContainer = document.querySelector('.stars-container');
 const words = ["Great", "Amazing", "Creative", "Powerful"];
 const changingWord = document.querySelector('.changing-word');
 let index = 0;
 
-// Generate stars
-for (let i = 0; i < 50; i++) {
-  const star = document.createElement('div');
-  star.classList.add('star');
-  star.style.top = Math.random() * 100 + '%';
-  star.style.left = Math.random() * 100 + '%';
-  star.style.width = star.style.height = (Math.random() * 3 + 1) + 'px';
-  star.style.animationDelay = Math.random() * 3 + 's';
-  starsContainer.appendChild(star);
+// Generate stars - Fixed with null check
+if (starsContainer) {
+  for (let i = 0; i < 50; i++) {
+    const star = document.createElement('div');
+    star.classList.add('star');
+    star.style.top = Math.random() * 100 + '%';
+    star.style.left = Math.random() * 100 + '%';
+    star.style.width = star.style.height = (Math.random() * 3 + 1) + 'px';
+    star.style.animationDelay = Math.random() * 3 + 's';
+    starsContainer.appendChild(star);
+  }
 }
 
-// Shooting stars loop (fast + continuous)
-setInterval(() => {
-  const shootingStar = document.createElement('div');
-  shootingStar.classList.add('shooting-star');
-  shootingStar.style.top = Math.random() * 40 + "%";
-  shootingStar.style.left = Math.random() * 100 + "%";
-  starsContainer.appendChild(shootingStar);
-  setTimeout(() => shootingStar.remove(), 1500);
-}, 2000);
+// Shooting stars loop (fast + continuous) - Fixed with null check
+if (!prefersReducedMotion && starsContainer) {
+  setInterval(() => {
+    const shootingStar = document.createElement('div');
+    shootingStar.classList.add('shooting-star');
+    shootingStar.style.top = Math.random() * 40 + "%";
+    shootingStar.style.left = Math.random() * 100 + "%";
+    starsContainer.appendChild(shootingStar);
+    setTimeout(() => shootingStar.remove(), 1500);
+  }, 2000);
+}
 
-// Word changer
-setInterval(() => {
-  index = (index + 1) % words.length;
-  changingWord.textContent = words[index];
-}, 3000);
+function populateSectionStars(container, config = {}) {
+  if (!container || container.dataset.sparklesReady) return;
+  container.dataset.sparklesReady = 'true';
+
+  const {
+    count = 50,
+    minDelay = 4500,
+    maxDelay = 7800
+  } = config;
+
+  const fragment = document.createDocumentFragment();
+  for (let i = 0; i < count; i++) {
+    const sparkle = document.createElement('span');
+    sparkle.className = 'sparkle';
+    sparkle.style.top = `${Math.random() * 100}%`;
+    sparkle.style.left = `${Math.random() * 100}%`;
+    sparkle.style.animationDelay = `${Math.random() * 5}s`;
+    sparkle.style.animationDuration = `${6 + Math.random() * 5}s`;
+    fragment.appendChild(sparkle);
+  }
+  container.appendChild(fragment);
+
+  if (prefersReducedMotion) return;
+
+  const spawnShootingSparkle = () => {
+    const shooting = document.createElement('span');
+    shooting.className = 'shooting-sparkle';
+    shooting.style.top = `${Math.random() * 40}%`;
+    shooting.style.left = `${20 + Math.random() * 80}%`;
+    container.appendChild(shooting);
+    setTimeout(() => shooting.remove(), 1600);
+  };
+
+  const scheduleSparkle = () => {
+    const delay = minDelay + Math.random() * (maxDelay - minDelay);
+    setTimeout(() => {
+      if (!document.body.contains(container)) return;
+      spawnShootingSparkle();
+      scheduleSparkle();
+    }, delay);
+  };
+
+  scheduleSparkle();
+}
+
+const sectionStarConfig = {
+  hero: { count: 70, minDelay: 3200, maxDelay: 6400 },
+  about: { count: 52, minDelay: 4200, maxDelay: 7600 },
+  services: { count: 60, minDelay: 3600, maxDelay: 6800 }
+};
+
+document.querySelectorAll('.section-stars').forEach(section => {
+  const key = section.dataset.stars || 'default';
+  populateSectionStars(section, sectionStarConfig[key] || {});
+});
+
+// Word changer - Fixed with null check
+if (changingWord) {
+  setInterval(() => {
+    index = (index + 1) % words.length;
+    changingWord.textContent = words[index];
+  }, 3000);
+}
 
 
 // Initialize Lucide Icons
@@ -865,6 +1142,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initDarkMode() {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const html = document.documentElement;
+    if (!darkModeToggle) return;
     
     // Check for saved theme preference or default to system preference
     const savedTheme = localStorage.getItem('theme');
@@ -873,10 +1151,12 @@ function initDarkMode() {
     if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
         html.classList.add('dark');
     }
+    darkModeToggle.setAttribute('aria-pressed', html.classList.contains('dark'));
     
     // Toggle dark mode
     darkModeToggle.addEventListener('click', () => {
         html.classList.toggle('dark');
+        darkModeToggle.setAttribute('aria-pressed', html.classList.contains('dark'));
         
         // Save preference
         if (html.classList.contains('dark')) {
@@ -888,6 +1168,9 @@ function initDarkMode() {
         // Re-create icons to update colors
         lucide.createIcons();
     });
+    
+    // Ensure icons match initial state
+    lucide.createIcons();
 }
 
 // Animation Enhancements
@@ -898,7 +1181,7 @@ function initAnimations() {
         rootMargin: '0px 0px -50px 0px'
     };
     
-    const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
@@ -908,7 +1191,7 @@ function initAnimations() {
     }, observerOptions);
     
     // Observe all stat cards and content
-    const animatedElements = document.querySelectorAll('.stat-card, .hero-content, .hero-image-container');
+    const animatedElements = document.querySelectorAll('.hero-content, .hero-showcase, .hero-card, .about-card, .service-card, .products-copy, .products-visual, .product-media');
     animatedElements.forEach(el => observer.observe(el));
 }
 
@@ -958,50 +1241,110 @@ document.addEventListener('mousemove', (e) => {
     });
 });
 
-// Add click handlers for buttons (you can customize these)
-document.querySelector('.btn-primary').addEventListener('click', () => {
-    console.log('View My Work clicked');
-    // Add your navigation logic here
-    // window.location.href = '#portfolio';
-});
+// Add click handlers for buttons (you can customize these) - Fixed with null checks
+const btnPrimary = document.querySelector('.btn-primary');
+if (btnPrimary) {
+    btnPrimary.addEventListener('click', () => {
+        console.log('View My Work clicked');
+        // Add your navigation logic here
+        // window.location.href = '#portfolio';
+    });
+}
 
-document.querySelector('.btn-outline').addEventListener('click', () => {
-    console.log('Get In Touch clicked');
-    // Add your contact logic here
-    // window.location.href = '#contact';
-});
+const btnOutline = document.querySelector('.btn-outline');
+if (btnOutline) {
+    btnOutline.addEventListener('click', () => {
+        console.log('Get In Touch clicked');
+        // Add your contact logic here
+        // window.location.href = '#contact';
+    });
+}
 
-// Social links click handlers (customize with your actual social URLs)
+// Social links click handlers (customize with your actual social URLs) - Fixed with null checks
 const socialLinks = document.querySelectorAll('.social-link');
-socialLinks[0].addEventListener('click', (e) => {
-    e.preventDefault();
-    window.open('https://github.com/yourusername', '_blank');
-});
+if (socialLinks[0]) {
+    socialLinks[0].addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open('https://github.com/yourusername', '_blank');
+    });
+}
 
-socialLinks[1].addEventListener('click', (e) => {
-    e.preventDefault();
-    window.open('https://linkedin.com/in/yourusername', '_blank');
-});
+if (socialLinks[1]) {
+    socialLinks[1].addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open('https://linkedin.com/in/yourusername', '_blank');
+    });
+}
 
-socialLinks[2].addEventListener('click', (e) => {
-    e.preventDefault();
-    window.open('https://twitter.com/yourusername', '_blank');
-});
+if (socialLinks[2]) {
+    socialLinks[2].addEventListener('click', (e) => {
+        e.preventDefault();
+        window.open('https://twitter.com/yourusername', '_blank');
+    });
+}
 
-socialLinks[3].addEventListener('click', (e) => {
-    e.preventDefault();
-    window.location.href = 'mailto:your.email@example.com';
-});
+if (socialLinks[3]) {
+    socialLinks[3].addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'mailto:your.email@example.com';
+    });
+}
 
 
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.getElementById("primary-menu");
 
-navToggle.addEventListener("click", () => {
-  const expanded = navToggle.getAttribute("aria-expanded") === "true" || false;
-  navToggle.setAttribute("aria-expanded", !expanded);
-  navMenu.classList.toggle("active");
+if (navToggle && navMenu) {
+  navToggle.addEventListener("click", () => {
+    const expanded = navToggle.getAttribute("aria-expanded") === "true" || false;
+    navToggle.setAttribute("aria-expanded", !expanded);
+    navMenu.classList.toggle("active");
+  });
+}
+
+// Set current year - Fixed
+const yearTarget = document.getElementById('currentYear');
+if (yearTarget) {
+  yearTarget.textContent = new Date().getFullYear();
+}
+
+const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
+navLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    const targetId = link.getAttribute('href');
+    if (!targetId || targetId === '#') return;
+    const targetEl = document.querySelector(targetId);
+    if (!targetEl) return;
+
+    if (navMenu && navMenu.classList.contains('active')) {
+      navMenu.classList.remove('active');
+      if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+    }
+
+    targetEl.classList.remove('section-spotlight');
+    requestAnimationFrame(() => {
+      targetEl.classList.add('section-spotlight');
+      setTimeout(() => targetEl.classList.remove('section-spotlight'), 1100);
+    });
+  });
 });
+
+// Contact form handler - Fixed
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(contactForm);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
+    
+    // You can add your form submission logic here
+    // For now, we'll just show an alert
+    alert(`Thank you ${name}! Your message has been received. We'll get back to you at ${email} soon.`);
+    contactForm.reset();
+  });
+}
 </script>
 
 </body>
